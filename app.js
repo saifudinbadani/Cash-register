@@ -12,7 +12,8 @@ checkButton.addEventListener('click', function validateBillAndCashGivenAmount(){
     
     if (billAmount.value > 0){
         if (cashGiven.value >= billAmount.value){
-                calculateChange();
+            var changeToBeGiven = cashGiven.value - billAmount.value;
+                calculateChange(changeToBeGiven);
         }
         else {
            showMessage ("Bhai free me le jao, tumse na ho payega!")
@@ -26,12 +27,12 @@ checkButton.addEventListener('click', function validateBillAndCashGivenAmount(){
 })
 
 
-function calculateChange(){
+function calculateChange(changeToBeGiven){
     for (i=0; i<notes.length; i++){
-     var changeToBeGiven = cashGiven.value - billAmount.value;
+     
      var numberOfNotes = Math.trunc(changeToBeGiven/notes[i])
      changeToBeGiven = changeToBeGiven % notes[i];
-     noOfNotes[i].innerText= numberOfNotes
+     noOfNotes[i].innerText= numberOfNotes;
     }
     
 }
