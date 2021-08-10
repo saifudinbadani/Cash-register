@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
+
 :root{
     --primary-color: #0891B2;
     --secondary-color: 
@@ -7,6 +9,7 @@ body{
     margin: 0;
 }
 .inputForm{
+    font-family: 'Open Sans', sans-serif;
     display: flex;
     flex-direction: column;
     width: 80%;
