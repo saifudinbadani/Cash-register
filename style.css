@@ -1,12 +1,15 @@
-table
+table, th, td
 {
     border: 1px solid black;
+    min-width: 80%;
+    margin: auto;
+    
 }
 
-.cashTable{
+/* .cashTable{
     border: 1px solid black;
 }
 
 .notesTable{
 border: 1px solid black;
-}
+} */
