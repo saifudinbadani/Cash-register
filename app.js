@@ -1,3 +1,4 @@
+// For neogcamp: please read commented code at bottom
 var billAmount = document.querySelector("#billAmount");
 var cashGiven = document.querySelector("#cashGiven");
 var checkButton = document.querySelector("#checkButton");
