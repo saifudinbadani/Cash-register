@@ -1,16 +1,63 @@
-
-table, th, td
-{
-    border: 1px solid black;
-    min-width: 80%;
+:root{
+    --primary-color: #0891B2;
+    --secondary-color: 
+    #67E8F9;
+    }
+body{
+    margin: 0;
+}
+.inputForm{
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    min-height: 500px;
     margin: auto;
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    
+}
+label{
+    margin: 0.5rem;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+}
+
+.bill{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 2rem 1rem;
     
 }
 
-/* .cashTable{
-    border: 1px solid black;
+.cash{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 2rem 1rem;
+}
+#checkButton{
+    
+    padding: 0.5rem 1rem;
+    display: block;
+    font-size: 1rem;
+    border: none;
+    margin: 1rem auto 0;
+    font-weight: bold;
+}
+table, th, td
+{
+    padding: 0.2rem;
+    margin: 1rem;
+    color: black;
+    background-color: var(--primary-color);
+    border: 1px solid var(--secondary-color);
+    border-collapse: collapse;
+    
 }
 
-.notesTable{
-border: 1px solid black;
-} */
+#noOfNotes{
+    background-color: white;
+}

@@ -7,50 +7,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cash Register</title>
     <link href="style.css" rel="stylesheet" />
-    
+
 </head>
 
 <body>
-    <div>
+    <div class='inputForm'>
+        <h1> Cash Register</h1>
 
-    
-    <h1> Cash Register</h1>
-    <caption>enter the bill amount and cash given, application will calculate the number of notes to be give back.</caption>
-    <label for="billAmount">Bill Amount:</label>
-    <input id='billAmount' />
-    
-    <label for="cashGiven">Cash given:</label>
-    <input id='cashGiven'/>
-    <button id="checkButton">Check</button>
+        <caption>enter the bill amount and cash given, application will calculate the number of notes to be give back.
+        </caption>
+        <div id="billDiv" class='bill'>
+            <label for="billAmount">Bill Amount:</label>
+            <input id='billAmount' />
+        </div>
+        <button class="btn" id="nextButton">Next</button>
+        <div id="cashDiv" class='cash'>
+            <label for="cashGiven">Cash given:</label>
+            <input id='cashGiven' />
+            <button id="checkButton">Check</button>
+        </div>
 
-        <hr />
         <p id="message"></p>
-    <table>
-        <tr class="cashTable">
-            <th>No of Notes:</th>
-            <td id="noOfNotes"></td>
-            <td id="noOfNotes"></td>
-            <td id="noOfNotes"></td>
-            <td id="noOfNotes"></td>
-            <td id="noOfNotes"></td>
-            <td id="noOfNotes"></td>
-            <td id="noOfNotes"></td>
-        </tr>
-        <tr class="notesTable">
-            <th> Notes:</th>
-            <td>2000</td>
-            <td>500</td>
-            <td>100</td>
-            <td>50</td>
-            <td>10</td>
-            <td>5</td>
-            <td>1</td>
-        </tr>
-        
-        
-    </table>
+        <table>
+            <tr class="cashTable">
+                <th>No of Notes:</th>
+                <td id="noOfNotes"></td>
+                <td id="noOfNotes"></td>
+                <td id="noOfNotes"></td>
+                <td id="noOfNotes"></td>
+                <td id="noOfNotes"></td>
+                <td id="noOfNotes"></td>
+                <td id="noOfNotes"></td>
+            </tr>
+            <tr class="notesTable">
+                <th> Notes:</th>
+                <td>2000</td>
+                <td>500</td>
+                <td>100</td>
+                <td>50</td>
+                <td>10</td>
+                <td>5</td>
+                <td>1</td>
+            </tr>
 
+
+        </table>
     </div>
+
+
+
 
     <script src="app.js" type="text/javascript"></script>
 

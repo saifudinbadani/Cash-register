@@ -1,43 +1,55 @@
 var billAmount = document.querySelector("#billAmount");
-var cashGiven= document.querySelector("#cashGiven");
+var cashGiven = document.querySelector("#cashGiven");
 var checkButton = document.querySelector("#checkButton");
-var writeMessage=document.querySelector("#message");
-var noOfNotes=document.querySelectorAll("#noOfNotes");
+var writeMessage = document.querySelector("#message");
+var noOfNotes = document.querySelectorAll("#noOfNotes");
+var billDiv = document.querySelector('#billDiv');
+var cashDiv = document.querySelector('#cashDiv');
+var nextButton = document.querySelector('#nextButton');
+
 
 const notes = [2000, 500, 100, 20, 10, 5, 1];
 
+cashDiv.style.display = 'none';
 writeMessage.style.display = 'none';
 
-checkButton.addEventListener('click', function validateBillAndCashGivenAmount(){
-    
-    if (billAmount.value > 0){
-        if (cashGiven.value >= billAmount.value){
-            var changeToBeGiven = cashGiven.value - billAmount.value;
-                calculateChange(changeToBeGiven);
-        }
-        else {
-           showMessage ("Bhai free me le jao, tumse na ho payega!")
-        }
+nextButton.addEventListener('click', function validateBillAmount() {
+    if (billAmount.value > 0) {
+        cashDiv.style.display = 'flex';
+        nextButton.style.display= 'none';
+    } else {
 
-    }
-    else {
-        
         showMessage("Please enter amount greater than 0")
     }
+
 })
 
 
-function calculateChange(changeToBeGiven){
-    for (i=0; i<notes.length; i++){
-     
-     var numberOfNotes = Math.trunc(changeToBeGiven/notes[i])
-     changeToBeGiven = changeToBeGiven % notes[i];
-     noOfNotes[i].innerText= numberOfNotes;
+checkButton.addEventListener('click', function validateCashGivenAmount(){
+    if (cashGiven.value >= billAmount.value) {
+        var changeToBeGiven = cashGiven.value - billAmount.value;
+        calculateChange(changeToBeGiven);
+    } else {
+        showMessage("Bhai free me le jao, tumse na ho payega!")
     }
-    
+
+})
+
+
+
+
+
+function calculateChange(changeToBeGiven) {
+    for (i = 0; i < notes.length; i++) {
+
+        var numberOfNotes = Math.trunc(changeToBeGiven / notes[i])
+        changeToBeGiven = changeToBeGiven % notes[i];
+        noOfNotes[i].innerText = numberOfNotes;
+    }
+
 }
 
-function showMessage(message){
+function showMessage(message) {
     writeMessage.style.display = 'block';
     writeMessage.innerText = message
 }
