@@ -27,7 +27,7 @@ label{
 .bill{
     display: flex;
     flex-direction: column;
-    width: 25vw;
+    width: 50%;
     margin: auto;
     padding: 2rem 1rem;
     
@@ -38,7 +38,7 @@ label{
     flex-direction: column;
     margin: auto;
     padding: 2rem 1rem;
-    width: 25vw;
+    width: 50%;
 }
 #checkButton{
     
@@ -62,7 +62,7 @@ table, th, td
 {
     padding: 0.2rem;
     margin: 1rem;
-    width: 25vw;
+    width: 50%;
     color: black;
     background-color: var(--primary-color);
     border: 1px solid var(--secondary-color);
