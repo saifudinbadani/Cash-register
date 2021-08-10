@@ -11,25 +11,29 @@
 </head>
 
 <body>
-    <h1> Cash Register</h1>
-    <h3>Enter the bill amount</h3>
-    <input id='billAmount' />
-    <button id="billAmountButton">Enter</button>
-    <h3>Cash given</h3>
-    <input id='cashGiven'/>
-    <button id="cashGivenButton">Enter</button>
-    <hr />
+    <div>
 
+    
+    <h1> Cash Register</h1>
+    <caption>enter the bill amount and cash given, application will calculate the number of notes to be give back.s</caption>
+    <label for="billAmount">Bill Amount:</label>
+    <input id='billAmount' />
+    
+    <label for="cashGiven">Cash given:</label>
+    <input id='cashGiven'/>
+    <button id="checkButton">Check</button>
+
+        <hr />
     <table>
         <tr class="cashTable">
             <th>No of Notes:</th>
-            <td class="changeGiven"></td>
-            <td class="changeGiven"></td>
-            <td class="changeGiven"></td>
-            <td class="changeGiven"></td>
-            <td class="changeGiven"></td>
-            <td class="changeGiven"></td>
-            <td class="changeGiven"></td>
+            <td id="noOfNotes"></td>
+            <td id="noOfNotes"></td>
+            <td id="noOfNotes"></td>
+            <td id="noOfNotes"></td>
+            <td id="noOfNotes"></td>
+            <td id="noOfNotes"></td>
+            <td id="noOfNotes"></td>
         </tr>
         <tr class="notesTable">
             <th> Notes:</th>
@@ -44,6 +48,8 @@
         
         
     </table>
+
+    </div>
 
     <script src="app.js" type="text/javascript"></script>
 
