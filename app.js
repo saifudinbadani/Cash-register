@@ -19,7 +19,7 @@ nextButton.addEventListener('click', function validateBillAmount() {
         nextButton.style.display= 'none';
     } else {
 
-        showMessage("Please enter amount greater than 0")
+        showMessage("Please enter a valid amount")
     }
 
 })
