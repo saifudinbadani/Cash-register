@@ -47,6 +47,15 @@ label{
     margin: 1rem auto 0;
     font-weight: bold;
 }
+
+#nextButton{
+    padding: 0.5rem 1rem;
+    display: block;
+    font-size: 1rem;
+    border: none;
+    margin: 1rem auto 0;
+    font-weight: bold;
+}
 table, th, td
 {
     padding: 0.2rem;
