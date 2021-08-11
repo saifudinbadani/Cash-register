@@ -25,14 +25,15 @@ nextButton.addEventListener('click', function validateBillAmount() {
 
 })
 
-
+// converting the value to number, solution was found on discord.
+// I think the .value takes input as a string that is why need to convert
 checkButton.addEventListener('click', function validateCashGivenAmount(){
-    if (cashGiven.value >= billAmount.value) {
-        var changeToBeGiven = cashGiven.value - billAmount.value;
+    if (Number(cashGiven.value) >= Number(billAmount.value)) {
+        var changeToBeGiven = Number(cashGiven.value) - Number(billAmount.value);
         calculateChange(changeToBeGiven);
     } else {
         showMessage("Bhai free me le jao, tumse na ho payega!")
-        console.log('here')
+        
     }
 
 })
