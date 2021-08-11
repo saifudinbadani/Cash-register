@@ -32,6 +32,7 @@ checkButton.addEventListener('click', function validateCashGivenAmount(){
         calculateChange(changeToBeGiven);
     } else {
         showMessage("Bhai free me le jao, tumse na ho payega!")
+        console.log('here')
     }
 
 })
