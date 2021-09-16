@@ -28,7 +28,7 @@ nextButton.addEventListener('click', function validateBillAmount() {
 // converting the value to number, solution was found on discord.
 // I think the .value takes input as a string that is why need to convert
 checkButton.addEventListener('click', function validateCashGivenAmount(){
-    if(billAmount.value > 0 && cashGiven.value >= 0){
+    if(billAmount.value >= 0 && cashGiven.value >= 0){
         if(Number(cashGiven.value) === Number(billAmount.value)){
             showMessage("No change to be returned.")
         }else{
