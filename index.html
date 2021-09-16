@@ -19,13 +19,13 @@
         </caption>
         <div id="billDiv" class='bill'>
             <label for="billAmount">Bill Amount:</label>
-            <input id='billAmount' type='tel'/>
+            <input id='billAmount' type='tel' min="0"/>
         </div>
         <button class="btn" id="nextButton">Next</button>
         <div id="cashDiv" class='cash'>
             <label for="cashGiven">Cash given:</label>
             <!-- added tel as input type for mobile devices -->
-            <input id='cashGiven' type='tel' />
+            <input id='cashGiven' type='tel' min="0"/>
             <button id="checkButton">Check</button>
         </div>
 
