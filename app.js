@@ -28,13 +28,22 @@ nextButton.addEventListener('click', function validateBillAmount() {
 // converting the value to number, solution was found on discord.
 // I think the .value takes input as a string that is why need to convert
 checkButton.addEventListener('click', function validateCashGivenAmount(){
-    if (Number(cashGiven.value) >= Number(billAmount.value)) {
-        var changeToBeGiven = Number(cashGiven.value) - Number(billAmount.value);
-        calculateChange(changeToBeGiven);
-    } else {
-        showMessage("Bhai free me le jao, tumse na ho payega!")
+    if(billAmount.value > 0 && cashGiven.value >= 0){
+        if(Number(cashGiven.value) === Number(billAmount.value)){
+            showMessage("No change to be returned.")
+        }else{
+            if (Number(cashGiven.value) >= Number(billAmount.value)) {
+                var changeToBeGiven = Number(cashGiven.value) - Number(billAmount.value);
+                calculateChange(changeToBeGiven);
+            } else {
+                showMessage("Bhai free me le jao, tumse na ho payega!")     
+            } 
+        }
         
+    }else{
+        showMessage("Please enter a valid amount.")
     }
+    
 
 })
 
@@ -44,7 +53,6 @@ checkButton.addEventListener('click', function validateCashGivenAmount(){
 
 function calculateChange(changeToBeGiven) {
     for (i = 0; i < notes.length; i++) {
-
         var numberOfNotes = Math.trunc(changeToBeGiven / notes[i])
         changeToBeGiven = changeToBeGiven % notes[i];
         noOfNotes[i].innerText = numberOfNotes;
@@ -71,7 +79,7 @@ function showMessage(message) {
 
 
 
-//Below code logic was build by me then I was stucked so I watched the video and made above code without looking....
+//Below code logic was build by me then I was stucked so I watched the video and wrote above code ....
 // var cashGiven=document.querySelector("#cashGiven");
 // var billAmount=document.querySelector("#billAmount");
 // var billAmountButton=document.querySelector("#billAmountButton");
